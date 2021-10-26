@@ -1,0 +1,15 @@
+name: GH job var
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Should this be job_id?
+        run: echo "${{ github.job }}"
